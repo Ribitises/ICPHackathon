@@ -18,7 +18,9 @@ header{
 }
 
 .patient{
-  width: 1250px;
+  display: flex;
+  flex-direction: column;
+  width: 1150px;
   margin: auto;
   margin-top: 50px;
   background-color: #fff;
@@ -44,78 +46,76 @@ header{
 /* Label for information */
 
 .nwa label{
-  padding-left: 250px;
+  padding-left: 350px;
   font-family: Arial;
   font-weight: lighter;
 }
 
 .asc label{
-  padding-left: 250px;
+  padding-left: 350px;
   font-family: Arial;
   font-weight: lighter;
 }
 
 .number label{
-  padding-left: 250px;
+  padding-left: 450px;
   font-family: Arial;
   font-weight: lighter;
 }
 
+#name{
+  padding-left: 0px;
+}
+
+#age{
+  padding-left: 0px;
+}
+
 #sex{
-  padding-left: 265px;
+  padding-left: 365px;
 }
 
 #cs{
-  padding-left: 258px;
+  padding-left: 358px;
 }
 
-#hn{
-  padding-left: 350px;
+#rbn{
+  padding-left: 0px;
 }
 
 /* Information */
 
 .nwa_info label{
-  padding-left: 300px;
   font-family: Arial;
   font-weight: bolder;
   font-size: x-large;
 }
 
 .asc_info label{
-  padding-left: 300px;
+  padding-left: 250px;
   font-family: Arial;
   font-weight: bolder;
   font-size: x-large;
 }
 
 .number_info label{
-  padding-left: 300px;
+  padding-left: 250px;
   font-family: Arial;
   font-weight: bolder;
   font-size: x-large;
 }
 
-#ward{
-  padding-left: 100px;
+#name_info{
+  padding-left: 75px;
 }
 
-#doctor{
-  padding-left: 260px;
+#age_info{
+  padding-left: 75px;
 }
 
-#sex_info{
-  padding-left: 265px;
+#rbn_info{
+  padding-left: 75px;
 }
-
-#cs_info{
-  padding-left: 250px;
-}
-
-#hsn{
-  padding-left: 450px;
-}
-
 /* Pop-up for Monitoring Sheet */
 
 .popupMS{
