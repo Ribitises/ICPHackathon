@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nurse's Note</title>
+    <link rel="stylesheet" type="text/css" href="css/FDAR.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Patient Menu</h1>
+      </header>
+
+      <!-- Patient Info -->
+
+      <div class="patient">
+        <div class="icon">
+            <img src="images/icu.png" alt="">
+        </div>
+        <div class="information">
+          <div class="nwa">
+            <label>Name</label>
+            <label>Ward</label>
+            <label>Attending Physician</label>
+          </div>
+          <div class="nwa_info">
+            <label>Jose H. Balagtas</label>
+            <label id="ward">ICU</label>
+            <label id="doctor">Dr. Mario L. Dela Cruz</label>
+          </div>
+          <div class="asc">
+            <label>Age</label>
+            <label id="sex">Sex</label>
+            <label id="cs">Civil Status</label>
+          </div>
+          <div class="asc_info">
+            <label>25</label>
+            <label id="sex_info">Male</label>
+            <label id="cs_info">Single</label>
+          </div>
+          <div class="number">
+            <label>Room & Bed Number</label>
+            <label id="hn">Hospital Number</label>
+          </div>
+          <div class="number_info">
+            <label>2 - 5</label>
+            <label id="hsn">0122-45212</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Menu -->
+
+      <div class="menu">
+        <ul>
+          <li>
+            <button type="button" class="msbtn" onclick="openMS()">
+              Monitoring Sheet
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tprbtn" onclick="openTPR()">
+              TPR Sheet
+            </button>
+          </li>
+          <li>
+            <button type="button" class="iobtn" onclick="openIO()">
+              Fluid Intake and Output Monitoring Record
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nnbtn" onclick="openNN()">
+              Nurses Notes
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Monitoring Sheet -->
+
+      <div class="popupMS" id="popupMS">
+        <button type="button" onclick="closeMS()" class="close">X</button>
+        <h2>Monitoring Sheet</h2>
+        <label>Date: </label>
+        <label>Time: </label>
+        <label>Blood Pressure: </label>
+        <label>Pulse Rate: </label>
+        <label>Respiratory Rate: </label>
+        <label>Temperature: </label>
+        <label>Mental Status: </label>
+        <label>Remarks: </label>
+        <label>Signature: </label>
+        <button type="submit" onclick="submitMS()" class="submit">
+          Submit
+        </button>
+      </div>
+
+      <div class="popupTPR" id="popupTPR">
+        <button type="button" onclick="closeTPR()" class="close">X</button>
+        <h2>TPR Sheet</h2>
+        <button type="submit" onclick="submitTPR()" class="submit">
+          Submit
+        </button>
+      </div>
+
+      <div class="popupIO" id="popupIO">
+        <button type="button" onclick="closeIO()" class="close">X</button>
+        <h2>Fluid Intake and Output Monitoring Record</h2>
+        <button type="submit" onclick="submitIO()" class="submit">
+          Submit
+        </button>
+      </div>
+
+      <div class="popupNN" id="popupNN">
+        <button type="button" onclick="closeNN()" class="close">X</button>
+        <h2>Nurses Notes</h2>
+        <button type="submit" onclick="submitNN()" class="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <script src="js/Input_Menu.js"></script>
+  </body>
+</html>
