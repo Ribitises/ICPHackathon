@@ -28,12 +28,16 @@ header{
   padding: 20px;
 }
 
+.information{
+  padding-top: 25px;
+}
+
 .icon{
   align-content: center;
 }
 
 .icon img{
-  width: 200px;
+  width: 175px;
   margin-top: -50px;
   border-radius: 50%;
   max-width: 100%;
@@ -41,6 +45,15 @@ header{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nwa_info, .asc_info, .number_info{
+  padding-top: 10px;
+}
+
+.asc, .number{
+  padding-top: 15px;
 }
 
 /* Label for information */
@@ -58,13 +71,17 @@ header{
 }
 
 .number label{
-  padding-left: 450px;
+  padding-left: 240px;
   font-family: Arial;
   font-weight: lighter;
 }
 
 #name{
   padding-left: 0px;
+}
+
+#ap{
+  padding-left: 275px;
 }
 
 #age{
@@ -76,7 +93,7 @@ header{
 }
 
 #cs{
-  padding-left: 358px;
+  padding-left: 285px;
 }
 
 #rbn{
@@ -88,45 +105,79 @@ header{
 .nwa_info label{
   font-family: Arial;
   font-weight: bolder;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 .asc_info label{
-  padding-left: 250px;
   font-family: Arial;
   font-weight: bolder;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 .number_info label{
-  padding-left: 250px;
   font-family: Arial;
   font-weight: bolder;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 #name_info{
-  padding-left: 75px;
+  padding-left: 65px;
+}
+
+#ward_info{
+  padding-left: 135px;
+}
+
+#ap_info{
+  padding-left: 250px;
 }
 
 #age_info{
-  padding-left: 75px;
+  padding-left: 65px;
+}
+
+#sex_info{
+  padding-left: 355px;
+}
+
+#cs_info{
+  padding-left: 235px;
 }
 
 #rbn_info{
-  padding-left: 75px;
+  padding-left: 65px;
 }
+
+#hn_info{
+  padding-left: 325px;
+}
+
+/* Pop-up */
+
+.popupMS label{
+  font-family: Arial;
+  padding-left: 20px;
+}
+
+.title{
+  text-align: center;
+  font-family: Arial;
+  font-size: larger;
+  padding: 20px;
+}
+
 /* Pop-up for Monitoring Sheet */
 
 .popupMS{
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
   background: #fff;
   border-radius: 6px;
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   padding: 30px 30px 30px;
   color: #333;
   visibility: hidden;
@@ -167,9 +218,12 @@ header{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 /* Pop-up for TPR sheet */
 
-.popupTPR{
+/* .popupTPR{
+  display: flex;
+  flex-direction: column;
   width: 400px;
   background: #fff;
   border-radius: 6px;
@@ -177,7 +231,6 @@ header{
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   padding: 30px 30px 30px;
   color: #333;
   visibility: hidden;
@@ -217,19 +270,20 @@ header{
   cursor: pointer;
   align-self: self-start;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Pop-up for IO sheet */
 
 .popupIO{
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
   background: #fff;
   border-radius: 6px;
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   padding: 30px 30px 30px;
   color: #333;
   visibility: hidden;
@@ -273,6 +327,8 @@ header{
 /* Pop-up for NN sheet */
 
 .popupNN{
+  display: flex;
+  flex-direction: column;
   width: 400px;
   background: #fff;
   border-radius: 6px;
@@ -280,7 +336,6 @@ header{
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   padding: 30px 30px 30px;
   color: #333;
   visibility: hidden;
@@ -320,3 +375,4 @@ header{
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
+

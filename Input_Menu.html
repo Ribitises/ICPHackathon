@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nurse's Note</title>
+    <title>Patient Menu</title>
     <link rel="stylesheet" type="text/css" href="css/FDAR.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
 
       <div class="patient">
         <div class="icon">
-            <img src="images/icu.png" alt="">
+          <img src="images/icu.png" alt="" />
         </div>
         <div class="information">
           <div class="nwa">
@@ -59,11 +59,11 @@
               Monitoring Sheet
             </button>
           </li>
-          <li>
+          <!-- <li>
             <button type="button" class="tprbtn" onclick="openTPR()">
               TPR Sheet
             </button>
-          </li>
+          </li> -->
           <li>
             <button type="button" class="iobtn" onclick="openIO()">
               Fluid Intake and Output Monitoring Record
@@ -81,40 +81,135 @@
 
       <div class="popupMS" id="popupMS">
         <button type="button" onclick="closeMS()" class="close">X</button>
-        <h2>Monitoring Sheet</h2>
-        <label>Date: </label>
-        <label>Time: </label>
-        <label>Blood Pressure: </label>
-        <label>Pulse Rate: </label>
-        <label>Respiratory Rate: </label>
-        <label>Temperature: </label>
-        <label>Mental Status: </label>
-        <label>Remarks: </label>
-        <label>Signature: </label>
+        <div class="title">
+          <h2>Monitoring Sheet</h2>
+        </div>
+        <div class="form">
+          <div class="date_time">
+            <label>Date & Time: </label>
+            <input type="datetime-local" name="" class="date_picker" />
+          </div>
+          <div class="bp">
+            <label>Blood Pressure: </label>
+            <input type="number" name="" id="" />
+            <label>/</label>
+            <input type="number" name="" id="" />
+          </div>
+          <div class="pr">
+            <label>Pulse Rate: </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div class="rr">
+            <label>Respiratory Rate: </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div class="temp">
+            <label>Temperature: </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div class="ms">
+            <label>Mental Status: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="remarks">
+            <label>Remarks: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="signature">
+            <label>Nurse's Name & Signature: </label>
+          </div>
+        </div>
         <button type="submit" onclick="submitMS()" class="submit">
           Submit
         </button>
       </div>
 
-      <div class="popupTPR" id="popupTPR">
+      <!-- TPR Sheet -->
+
+      <!-- <div class="popupTPR" id="popupTPR">
         <button type="button" onclick="closeTPR()" class="close">X</button>
         <h2>TPR Sheet</h2>
         <button type="submit" onclick="submitTPR()" class="submit">
           Submit
         </button>
-      </div>
+      </div> -->
 
+      <!-- I&O Sheet -->
       <div class="popupIO" id="popupIO">
         <button type="button" onclick="closeIO()" class="close">X</button>
-        <h2>Fluid Intake and Output Monitoring Record</h2>
+        <div class="title">
+          <h2>Fluid Intake and Output Monitoring Record</h2>
+        </div>
+        <div class="form">
+          <div class="date_time">
+            <label for="">Date & Time: </label>
+            <input type="datetime-local" name="" id="" />
+          </div>
+          <div class="intake">
+            <h3>Intake</h3>
+            <label for="">Parenteral: </label>
+            <input type="number" name="" id="" />
+            <label for="">Oral: </label>
+            <input type="number" name="" id="" />
+            <br />
+            <label for="">Others: </label>
+            <input type="number" name="" id="" />
+            <br />
+            <label for="">Total: </label>
+          </div>
+          <div class="output">
+            <h3>Output</h3>
+            <label for="">Urine: </label>
+            <input type="number" name="" id="" />
+            <label for="">Drainage: </label>
+            <input type="number" name="" id="" />
+            <br />
+            <label for="">Others: </label>
+            <input type="number" name="" id="" />
+            <br />
+            <label for="">Total: </label>
+          </div>
+        </div>
+        <div class="nurse">
+          <label for="">Nurse's Name & Signature</label>
+        </div>
         <button type="submit" onclick="submitIO()" class="submit">
           Submit
         </button>
       </div>
 
+      <!-- Nurses Notes -->
+
       <div class="popupNN" id="popupNN">
         <button type="button" onclick="closeNN()" class="close">X</button>
-        <h2>Nurses Notes</h2>
+        <div class="title">
+          <h2>Nurses Notes</h2>
+        </div>
+        <div class="form">
+          <div class="date_time">
+            <label for="">Date & Time</label>
+            <input type="datetime-local" name="" id="" />
+          </div>
+          <div class="focus">
+            <label for="">Focus: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="data">
+            <label for="">Data: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="action">
+            <label for="">Action: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="response">
+            <label for="">Response: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="nurse">
+            <label for="">Nurse's Name & Signature</label>
+          </div>
+        </div>
         <button type="submit" onclick="submitNN()" class="submit">
           Submit
         </button>
