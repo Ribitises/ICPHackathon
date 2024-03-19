@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.rectangle1 {
+  height: 100vh;
+  width: 300px;
+  background-color: #4c74af;
+  padding: 10px;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
+  position: relative;
+}
+
+.LoginCreds {
+  font-family: Arial;
+  font-size: medium;
+  margin-top: 15px;
+}
+
+.provcreds {
+  margin-top: 10px;
+}
+
+.profpic {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.head {
+  margin-top: 45px;
+  margin-left: 120px;
+  font-family: Arial;
+  color: white;
+}
+
+.head2 {
+  margin-top: 20px;
+  margin-left: 8px;
+  font-family: Arial;
+  color: white;
+}
+
+.head > .signin {
+  font-size: 15px;
+}
+
+.head > .provcreds {
+  font-size: 13px;
+}
+
+.divider1 {
+  height: 2px;
+  width: auto;
+  background-color: white; /* Add white background color */
+  margin-top: 15px; /* Adjust as needed */
+}
+
+.divider2 {
+  height: 1px;
+  width: auto;
+  background-color: white; /* Add white background color */
+  margin-top: 15px; /* Adjust as needed */
+}
+
+.table-container {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  margin-left: 10px; /* Adjusted margin to create space between sidebar and table */
+}
+
+table {
+  margin-top: 100px;;
+  width: 60%; /* Set table width to 100% to fill the container */
+  border-collapse: collapse;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 5px;
+  font-family: Arial;
+  text-align: left;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+body {
+  background-color: #ffffff;
+}
