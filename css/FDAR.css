@@ -1,42 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); 
+
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-    background-color: #cfdaee;
-  }
+  background-color: #cfdaee;
+  font-family: "Roboto", sans-serif;
+}
 
-header{
+/* header{
   display: flex;
-  flex-direction: column;
   font-family: Arial;
   font-size: medium;
-  /* text-align: center; */
+  text-align: center; 
   background-color: #4c74af;
   padding-top: 1px;
-}
+} */
 
-.patient{
+.container {
   display: flex;
-  flex-direction: column;
-  width: 1150px;
-  margin: auto;
-  margin-top: 50px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
 }
 
-.information{
+.patient {
+  height: 100vh;
+  width: 300px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
+  position: relative;
+}
+
+.information {
   padding-top: 25px;
 }
 
-.icon{
+.icon {
   align-content: center;
 }
 
-.icon img{
+.icon img {
   width: 175px;
   margin-top: -50px;
   border-radius: 50%;
@@ -48,17 +52,20 @@ header{
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-.nwa_info, .asc_info, .number_info{
+.nwa_info,
+.asc_info,
+.number_info {
   padding-top: 10px;
 }
 
-.asc, .number{
+.asc,
+.number {
   padding-top: 15px;
 }
 
 /* Label for information */
 
-.nwa label{
+/* .nwa label{
   padding-left: 350px;
   font-family: Arial;
   font-weight: lighter;
@@ -98,17 +105,26 @@ header{
 
 #rbn{
   padding-left: 0px;
-}
+} */
 
 /* Information */
 
-.nwa_info label{
-  font-family: Arial;
-  font-weight: bolder;
-  font-size: xx-large;
+.info_head {
+  margin-top: 45px;
+  margin-left: 120px;
+  /* font-family: Arial; */
+  background-color: #4c74af;
 }
 
-.asc_info label{
+.info_head > .name {
+  font-size: 15px;
+}
+
+.info_head > .ward {
+  font-size: 13px;
+}
+
+/* .asc_info label{
   font-family: Arial;
   font-weight: bolder;
   font-size: xx-large;
@@ -150,29 +166,85 @@ header{
 
 #hn_info{
   padding-left: 325px;
+} */
+
+/* View & Edit Tabs */
+.tabForms {
+  width: 1250px;
+}
+
+.tabs {
+  overflow: hidden;
+  /* font-family: monospace; */
+  text-align: center;
+  margin-top: 3%;
+}
+
+.tabs button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 125px;
+  transition: 0.3s;
+  font-size: larger;
+}
+
+.tabs button:hover {
+  background-color: #fff;
+}
+
+.tabs button:active {
+  background-color: #815c5c;
+  text-decoration: underline;
+}
+
+.tabContent {
+  display: hidden;
+  padding: 6px 12px;
+  /* font-family: Arial; */
+  text-align: center;
+  /* border: 1px solid #ccc;
+  border-top: none; */
+}
+
+.tabContent li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 15px;
+  padding-top: 20px;
+}
+
+.tabContent button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 75px;
+  transition: 0.3s;
 }
 
 /* Pop-up */
 
-.popupMS label{
-  font-family: Arial;
+.popupMS label {
+  /* font-family: Arial; */
   padding-left: 20px;
 }
 
-.title{
+.title {
   text-align: center;
-  font-family: Arial;
+  /* font-family: Arial; */
   font-size: larger;
   padding: 20px;
 }
 
 /* Pop-up for Monitoring Sheet */
 
-.popupMS{
+.popupMS {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  background: #fff;
+  width: 700px;
+  background: #ffffff;
   border-radius: 6px;
   position: absolute;
   top: 25%;
@@ -184,13 +256,13 @@ header{
   transition: transform 0.4s, top 0.4s;
 }
 
-.open-MS{
+.open-MS {
   visibility: visible;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.popupMS .submit{
+.popupMS .submit {
   width: 100%;
   margin-top: 50px;
   padding: 10px 0;
@@ -204,7 +276,7 @@ header{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popupMS .close{
+.popupMS .close {
   width: 8%;
   margin-top: 0px;
   padding: 8px 0;
@@ -218,10 +290,9 @@ header{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Pop-up for TPR sheet */
 
-/* .popupTPR{
+.popupTPR {
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -237,13 +308,13 @@ header{
   transition: transform 0.4s, top 0.4s;
 }
 
-.open-TPR{
+.open-TPR {
   visibility: visible;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.popupTPR .submit{
+.popupTPR .submit {
   width: 100%;
   margin-top: 50px;
   padding: 10px 0;
@@ -257,7 +328,7 @@ header{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popupTPR .close{
+.popupTPR .close {
   width: 10%;
   margin-top: 0px;
   padding: 6px 0;
@@ -270,11 +341,11 @@ header{
   cursor: pointer;
   align-self: self-start;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-} */
+}
 
 /* Pop-up for IO sheet */
 
-.popupIO{
+.popupIO {
   display: flex;
   flex-direction: column;
   width: 600px;
@@ -290,13 +361,13 @@ header{
   transition: transform 0.4s, top 0.4s;
 }
 
-.open-IO{
+.open-IO {
   visibility: visible;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.popupIO .submit{
+.popupIO .submit {
   width: 100%;
   margin-top: 50px;
   padding: 10px 0;
@@ -310,7 +381,7 @@ header{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popupIO .close{
+.popupIO .close {
   width: 10%;
   margin-top: 0px;
   padding: 10px 0;
@@ -326,7 +397,7 @@ header{
 
 /* Pop-up for NN sheet */
 
-.popupNN{
+.popupNN {
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -342,13 +413,13 @@ header{
   transition: transform 0.4s, top 0.4s;
 }
 
-.open-NN{
+.open-NN {
   visibility: visible;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.popupNN .submit{
+.popupNN .submit {
   width: 100%;
   margin-top: 50px;
   padding: 10px 0;
@@ -362,7 +433,7 @@ header{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popupNN .close{
+.popupNN .close {
   width: 10%;
   margin-top: 0px;
   padding: 10px 0;
@@ -375,4 +446,3 @@ header{
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-

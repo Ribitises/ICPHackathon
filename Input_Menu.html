@@ -8,28 +8,25 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <!-- <header>
         <h1>Patient Menu</h1>
-      </header>
+      </header> -->
 
       <!-- Patient Info -->
 
       <div class="patient">
-        <div class="icon">
+        <!-- <div class="icon">
           <img src="images/icu.png" alt="" />
-        </div>
+        </div> -->
         <div class="information">
-          <div class="nwa">
-            <label id="name">Name</label>
-            <label id="ward">Ward</label>
-            <label id="ap">Attending Physician</label>
+          <!-- <label id="ap">Attending Physician</label> -->
+          <div class="info_head">
+            <label id="name"><b>Jose H. Balagtas</b></label>
+            <br />
+            <label id="ward">ICU</label>
+            <!-- <label id="ap_info">Dr. Mario L. Dela Cruz</label> -->
           </div>
-          <div class="nwa_info">
-            <label id="name_info">Jose H. Balagtas</label>
-            <label id="ward_info">ICU</label>
-            <label id="ap_info">Dr. Mario L. Dela Cruz</label>
-          </div>
-          <div class="asc">
+          <!-- <div class="asc">
             <label id="age">Age</label>
             <label id="sex">Sex</label>
             <label id="cs">Civil Status</label>
@@ -46,35 +43,69 @@
           <div class="number_info">
             <label id="rbn_info">2 - 5</label>
             <label id="hn_info">0122-45212</label>
-          </div>
+          </div> -->
         </div>
       </div>
 
-      <!-- Input Menu -->
+      <!-- View & Edit Tabs -->
+      <div class="tabForms">
+        <div class="tabs">
+          <button class="tab" onclick="openTab(event, 'View')">VIEW</button>
+          <button class="tab" onclick="openTab(event, 'Add')">ADD</button>
+        </div>
 
-      <div class="menu">
-        <ul>
-          <li>
-            <button type="button" class="msbtn" onclick="openMS()">
-              Monitoring Sheet
-            </button>
-          </li>
-          <!-- <li>
-            <button type="button" class="tprbtn" onclick="openTPR()">
-              TPR Sheet
-            </button>
-          </li> -->
-          <li>
-            <button type="button" class="iobtn" onclick="openIO()">
-              Fluid Intake and Output Monitoring Record
-            </button>
-          </li>
-          <li>
-            <button type="button" class="nnbtn" onclick="openNN()">
-              Nurses Notes
-            </button>
-          </li>
-        </ul>
+        <div class="tabContent" id="View">
+          <div class="Title">View Patient Chart</div>
+          <div class="Menu">
+            <ul>
+              <li>
+                <img src="images/" alt="" id="img_ms" />
+                <button type="button" class="msbtn" onclick="openMS()">
+                  Monitoring Sheet
+                </button>
+              </li>
+              <li>
+                <img src="" alt="" id="img_io" />
+                <button type="button" class="iobtn" onclick="openIO()">
+                  I&O Sheet
+                </button>
+              </li>
+              <li>
+                <img src="" alt="" id="img_nn" />
+                <button type="button" class="nnbtn" onclick="openNN()">
+                  Nurses Notes
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tabContent" id="Add">
+          <div class="Title">Add Patient Chart</div>
+          <div class="Menu">
+            <ul>
+              <li>
+                <button type="button" class="msbtn" onclick="openMS()">
+                  Monitoring Sheet
+                </button>
+              </li>
+              <li>
+                <button type="button" class="tprbtn" onclick="openTPR()">
+                  TPR Sheet
+                </button>
+              </li>
+              <li>
+                <button type="button" class="iobtn" onclick="openIO()">
+                  I&O Sheet
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nnbtn" onclick="openNN()">
+                  Nurses Notes
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- Monitoring Sheet -->
@@ -126,15 +157,16 @@
 
       <!-- TPR Sheet -->
 
-      <!-- <div class="popupTPR" id="popupTPR">
+      <div class="popupTPR" id="popupTPR">
         <button type="button" onclick="closeTPR()" class="close">X</button>
         <h2>TPR Sheet</h2>
         <button type="submit" onclick="submitTPR()" class="submit">
           Submit
         </button>
-      </div> -->
+      </div>
 
       <!-- I&O Sheet -->
+
       <div class="popupIO" id="popupIO">
         <button type="button" onclick="closeIO()" class="close">X</button>
         <div class="title">
@@ -178,7 +210,7 @@
         </button>
       </div>
 
-      <!-- Nurses Notes -->
+      <!-- Nurses Notes  -->
 
       <div class="popupNN" id="popupNN">
         <button type="button" onclick="closeNN()" class="close">X</button>
