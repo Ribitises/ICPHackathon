@@ -8,50 +8,58 @@
   </head>
   <body>
     <div class="container">
-      <!-- <header>
-        <h1>Patient Menu</h1>
-      </header> -->
-
       <!-- Patient Info -->
 
       <div class="patient">
-        <!-- <div class="icon">
-          <img src="images/icu.png" alt="" />
-        </div> -->
-        <div class="information">
-          <!-- <label id="ap">Attending Physician</label> -->
-          <div class="info_head">
+        
+        <div class="info_head">
+          <div class="icon"><img src="images/icu.webp" alt=""></div>
+          <div class="nw">
             <label id="name"><b>Jose H. Balagtas</b></label>
             <br />
             <label id="ward">ICU</label>
-            <!-- <label id="ap_info">Dr. Mario L. Dela Cruz</label> -->
           </div>
-          <!-- <div class="asc">
-            <label id="age">Age</label>
-            <label id="sex">Sex</label>
-            <label id="cs">Civil Status</label>
+        </div>
+        <div class="info_body">
+          <div class="ap">
+            <label id="ap_label" class="label">Attending Physician</label>
+            <br>
+            <label class="info">Dr. Mario L. Dela Cruz</label>
           </div>
-          <div class="asc_info">
-            <label id="age_info">25</label>
-            <label id="sex_info">Male</label>
-            <label id="cs_info">Single</label>
+        </div>
+        <div class="ascs">
+          <div class="ascs_label">
+            <label id="age" class="label">Age</label>
+            <label id="sex" class="label">Sex</label>
+            <label id="cs" class="label">Civil Status</label>
           </div>
-          <div class="number">
-            <label id="rbn">Room & Bed Number</label>
-            <label id="hn">Hospital Number</label>
+          <div class="ascs_info">
+            <label class="info">25</label>
+            <label class="info" id="sex">M</label>
+            <label class="info" id="cs">Single</label>
           </div>
-          <div class="number_info">
-            <label id="rbn_info">2 - 5</label>
-            <label id="hn_info">0122-45212</label>
-          </div> -->
+        </div>
+        <div class="rbnum">
+          <label id="rn" class="label">Room No.</label>
+          <label id="bn">Bed No.</label>
+          <br>
+          <label class="info" id="rn_info">2</label>
+          <label class="info" id="bn_label">5</label>
+        </div>
+        <div class="hnum">
+          <label id="hn" class="label">Hospital Number</label>
+          <br>
+          <label class="info">0122-45212</label>
         </div>
       </div>
 
       <!-- View & Edit Tabs -->
       <div class="tabForms">
+        <div class="header">Patient Menu</div>
+
         <div class="tabs">
-          <button class="tab" onclick="openTab(event, 'View')">VIEW</button>
           <button class="tab" onclick="openTab(event, 'Add')">ADD</button>
+          <button class="tab" onclick="openTab(event, 'View')">VIEW</button>
         </div>
 
         <div class="tabContent" id="View">
@@ -59,21 +67,31 @@
           <div class="Menu">
             <ul>
               <li>
-                <img src="images/" alt="" id="img_ms" />
+                <button type="button" class="tprbtn" onclick="openTPR()">
+                  <img src="images/tpr.webp" alt="" />
+                  <br />
+                  <label>TPR Sheet</label>
+                </button>
+              </li>
+              <li>
                 <button type="button" class="msbtn" onclick="openMS()">
-                  Monitoring Sheet
+                  <img src="images/ms.png" alt="" id="img_ms" />
+                  <br />
+                  <label>Monitoring Sheet</label>
                 </button>
               </li>
               <li>
-                <img src="" alt="" id="img_io" />
                 <button type="button" class="iobtn" onclick="openIO()">
-                  I&O Sheet
+                  <img src="images/i&o.png" alt="" id="img_io" />
+                  <br />
+                  <label>I&O Sheet</label>
                 </button>
               </li>
               <li>
-                <img src="" alt="" id="img_nn" />
                 <button type="button" class="nnbtn" onclick="openNN()">
-                  Nurses Notes
+                  <img src="images/nurse.png" alt="" id="img_nn" />
+                  <br />
+                  <label>Nurses Notes</label>
                 </button>
               </li>
             </ul>
@@ -85,22 +103,23 @@
             <ul>
               <li>
                 <button type="button" class="msbtn" onclick="openMS()">
-                  Monitoring Sheet
-                </button>
-              </li>
-              <li>
-                <button type="button" class="tprbtn" onclick="openTPR()">
-                  TPR Sheet
+                  <img src="images/ms.png" alt="" id="img_ms" />
+                  <br />
+                  <label>Monitoring Sheet</label>
                 </button>
               </li>
               <li>
                 <button type="button" class="iobtn" onclick="openIO()">
-                  I&O Sheet
+                  <img src="images/i&o.png" alt="" id="img_io" />
+                  <br />
+                  <label>I&O Sheet</label>
                 </button>
               </li>
               <li>
                 <button type="button" class="nnbtn" onclick="openNN()">
-                  Nurses Notes
+                  <img src="images/nurse.png" alt="" id="img_nn" />
+                  <br />
+                  <label>Nurses Notes</label>
                 </button>
               </li>
             </ul>
@@ -111,40 +130,44 @@
       <!-- Monitoring Sheet -->
 
       <div class="popupMS" id="popupMS">
-        <button type="button" onclick="closeMS()" class="close">X</button>
         <div class="title">
+          <button type="button" onclick="closeMS()" class="close">X</button>
           <h2>Monitoring Sheet</h2>
         </div>
         <div class="form">
-          <div class="date_time">
-            <label>Date & Time: </label>
-            <input type="datetime-local" name="" class="date_picker" />
+          <div class="dt_label">
+            <label id="date">Date: </label>
+            <label id="time">Time: </label>
           </div>
-          <div class="bp">
-            <label>Blood Pressure: </label>
-            <input type="number" name="" id="" />
+          <div class="dt_input">
+            <input type="date" name="" id="date" />
+            <input type="time" name="" id="time" />
+          </div>
+          <div class="bppr_label">
+            <label id="bp">Blood Pressure: </label>
+            <label id="pr">Pulse Rate: </label>
+          </div>
+          <div class="bppr_input">
+            <input type="number" name="" id="bp" />
             <label>/</label>
-            <input type="number" name="" id="" />
+            <input type="number" name="" id="bp" />
+            <input type="number" name="" id="pr" />
           </div>
-          <div class="pr">
-            <label>Pulse Rate: </label>
-            <input type="number" name="" id="" />
+          <div class="rrtp_label">
+            <label id="rr">Respiratory Rate: </label>
+            <label id="temp">Temperature: </label>
           </div>
-          <div class="rr">
-            <label>Respiratory Rate: </label>
-            <input type="number" name="" id="" />
+          <div class="rrtp_input">
+            <input type="number" name="" id="rr" />
+            <input type="number" name="" id="temp" />
           </div>
-          <div class="temp">
-            <label>Temperature: </label>
-            <input type="number" name="" id="" />
+          <div class="msrm_label">
+            <label id="ms">Mental Status: </label>
+            <label id="remarks">Remarks: </label>
           </div>
-          <div class="ms">
-            <label>Mental Status: </label>
-            <input type="text" name="" id="" />
-          </div>
-          <div class="remarks">
-            <label>Remarks: </label>
-            <input type="text" name="" id="" />
+          <div class="msrm_input">
+            <input type="text" name="" id="ms" />
+            <input type="text" name="" id="rm" />
           </div>
           <div class="signature">
             <label>Nurse's Name & Signature: </label>
@@ -168,42 +191,47 @@
       <!-- I&O Sheet -->
 
       <div class="popupIO" id="popupIO">
-        <button type="button" onclick="closeIO()" class="close">X</button>
         <div class="title">
+          <button type="button" onclick="closeIO()" class="close">X</button>
           <h2>Fluid Intake and Output Monitoring Record</h2>
         </div>
         <div class="form">
-          <div class="date_time">
-            <label for="">Date & Time: </label>
-            <input type="datetime-local" name="" id="" />
+          <div class="dt_label">
+            <label id="date">Date: </label>
+            <label id="time">Time: </label>
           </div>
-          <div class="intake">
-            <h3>Intake</h3>
-            <label for="">Parenteral: </label>
-            <input type="number" name="" id="" />
-            <label for="">Oral: </label>
-            <input type="number" name="" id="" />
-            <br />
-            <label for="">Others: </label>
-            <input type="number" name="" id="" />
-            <br />
-            <label for="">Total: </label>
+          <div class="dt_input">
+            <input type="date" name="" id="date" />
+            <input type="time" name="" id="time" />
           </div>
-          <div class="output">
-            <h3>Output</h3>
-            <label for="">Urine: </label>
-            <input type="number" name="" id="" />
-            <label for="">Drainage: </label>
-            <input type="number" name="" id="" />
-            <br />
-            <label for="">Others: </label>
-            <input type="number" name="" id="" />
-            <br />
+          <div class="io_header">
+            <label id="intake">Intake</label>
+            <label id="output">Output</label>
+          </div>
+          <div class="pu">
+            <label id="parenteral">Parenteral: </label>
+            <input type="number" name="" id="prt" />
+            <label id="urine">Urine: </label>
+            <input type="number" name="" id="urn" />
+          </div>
+          <div class="od">
+            <label id="oral">Oral: </label>
+            <input type="number" name="" id="orl" />
+            <label id="drainage">Drainage: </label>
+            <input type="number" name="" id="drain" />
+          </div>
+          <div class="others">
+            <label id="others1">Others: </label>
+            <input type="number" name="" id="oth1" />
+            <label id="others2">Others: </label>
+            <input type="number" name="" id="oth2" />
+          </div>
+          <div class="total">
             <label for="">Total: </label>
           </div>
         </div>
         <div class="nurse">
-          <label for="">Nurse's Name & Signature</label>
+          <label for="">Nurse's Name & Signature:</label>
         </div>
         <button type="submit" onclick="submitIO()" class="submit">
           Submit
@@ -218,28 +246,40 @@
           <h2>Nurses Notes</h2>
         </div>
         <div class="form">
-          <div class="date_time">
-            <label for="">Date & Time</label>
-            <input type="datetime-local" name="" id="" />
+          <div class="dt_label">
+            <label id="date">Date: </label>
+            <label id="time">Time: </label>
           </div>
-          <div class="focus">
+          <div class="dt_input">
+            <input type="date" name="" id="date" />
+            <input type="time" name="" id="time" />
+          </div>
+          <div class="focus_label">
             <label for="">Focus: </label>
-            <input type="text" name="" id="" />
           </div>
-          <div class="data">
+          <div class="focus_input">
+            <input type="text" name="" class="nn_input" />
+          </div>
+          <div class="data_label">
             <label for="">Data: </label>
-            <input type="text" name="" id="" />
           </div>
-          <div class="action">
+          <div class="data_input">
+            <input type="text" name="" class="nn_input" />
+          </div>
+          <div class="action_label">
             <label for="">Action: </label>
-            <input type="text" name="" id="" />
           </div>
-          <div class="response">
+          <div class="action_input">
+            <input type="text" name="" class="nn_input" />
+          </div>
+          <div class="response_label">
             <label for="">Response: </label>
-            <input type="text" name="" id="" />
+          </div>
+          <div class="response_input">
+            <input type="text" name="" class="nn_input" />
           </div>
           <div class="nurse">
-            <label for="">Nurse's Name & Signature</label>
+            <label>Nurse's Name & Signature</label>
           </div>
         </div>
         <button type="submit" onclick="submitNN()" class="submit">

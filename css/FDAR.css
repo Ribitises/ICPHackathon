@@ -10,46 +10,15 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* header{
-  display: flex;
-  font-family: Arial;
-  font-size: medium;
-  text-align: center; 
-  background-color: #4c74af;
-  padding-top: 1px;
-} */
-
 .container {
   display: flex;
 }
 
 .patient {
   height: 100vh;
-  width: 300px;
-  padding: 10px;
+  width: 405px;
   background-color: #fff;
   box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
-  position: relative;
-}
-
-.information {
-  padding-top: 25px;
-}
-
-.icon {
-  align-content: center;
-}
-
-.icon img {
-  width: 175px;
-  margin-top: -50px;
-  border-radius: 50%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .nwa_info,
@@ -63,121 +32,123 @@ body {
   padding-top: 15px;
 }
 
-/* Label for information */
+/* Information Head */
 
-/* .nwa label{
-  padding-left: 350px;
-  font-family: Arial;
-  font-weight: lighter;
+.icon img{
+  width: 75px;
+  background-color: #fff;
+  padding: 13px;
+  border-radius: 5px;
+  margin-top: 18px;
+  margin-left: 18px;
 }
-
-.asc label{
-  padding-left: 350px;
-  font-family: Arial;
-  font-weight: lighter;
-}
-
-.number label{
-  padding-left: 240px;
-  font-family: Arial;
-  font-weight: lighter;
-}
-
-#name{
-  padding-left: 0px;
-}
-
-#ap{
-  padding-left: 275px;
-}
-
-#age{
-  padding-left: 0px;
-}
-
-#sex{
-  padding-left: 365px;
-}
-
-#cs{
-  padding-left: 285px;
-}
-
-#rbn{
-  padding-left: 0px;
-} */
-
-/* Information */
 
 .info_head {
-  margin-top: 45px;
-  margin-left: 120px;
-  /* font-family: Arial; */
+  display: flex;
+  flex-direction: row;
   background-color: #4c74af;
+  height: 135px;
+  color: #fff;
 }
 
-.info_head > .name {
+.nw{
+  margin-top: 55px;
+  margin-left: 10px;
+  padding-bottom: 50px;
+}
+
+.nw #name {
   font-size: 15px;
 }
 
-.info_head > .ward {
+.nw #ward {
   font-size: 13px;
 }
 
-/* .asc_info label{
-  font-family: Arial;
-  font-weight: bolder;
-  font-size: xx-large;
+/* Information Body */
+
+.ap {
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
-.number_info label{
-  font-family: Arial;
-  font-weight: bolder;
-  font-size: xx-large;
+.ascs {
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
-#name_info{
-  padding-left: 65px;
+.rbnum {
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
-#ward_info{
-  padding-left: 135px;
+.hnum {
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
-#ap_info{
-  padding-left: 250px;
+#age{
+  padding: 0;
 }
 
-#age_info{
-  padding-left: 65px;
+.info{
+  font-size: x-large;
+  font-weight: bold;
 }
 
-#sex_info{
-  padding-left: 355px;
+.ascs_label label{
+  padding-left: 40px;
 }
 
-#cs_info{
-  padding-left: 235px;
+.ascs_info{
+  padding-top: 3px;
 }
 
-#rbn_info{
-  padding-left: 65px;
+.ascs_info #sex{
+  padding-left: 43px;
 }
 
-#hn_info{
-  padding-left: 325px;
-} */
+.ascs_info #cs{
+  padding-left: 45px;
+}
+
+.rbnum label{
+  padding-left: 70px;
+}
+
+.rbnum #bn_label{
+  padding-left: 125px;
+}
+
+#rn{
+  padding-left: 0;
+}
+
+#rn_info{
+  padding-left: 0px;
+}
+
 
 /* View & Edit Tabs */
 .tabForms {
-  width: 1250px;
+  width: 100%;
+
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: #4c74af;
+  font-size: x-large;
+  color: #fff;
+  font-weight: bold;
 }
 
 .tabs {
   overflow: hidden;
   /* font-family: monospace; */
   text-align: center;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 .tabs button {
@@ -192,10 +163,10 @@ body {
 
 .tabs button:hover {
   background-color: #fff;
+  text-decoration: underline;
 }
 
 .tabs button:active {
-  background-color: #815c5c;
   text-decoration: underline;
 }
 
@@ -204,15 +175,21 @@ body {
   padding: 6px 12px;
   /* font-family: Arial; */
   text-align: center;
+  margin-top: 5%;
+  animation: fadeEffect 1s;
   /* border: 1px solid #ccc;
   border-top: none; */
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .tabContent li {
   list-style: none;
   display: inline-block;
-  padding: 0 15px;
-  padding-top: 20px;
+  margin-top: 5%;
 }
 
 .tabContent button {
@@ -224,17 +201,21 @@ body {
   transition: 0.3s;
 }
 
-/* Pop-up */
+.tabContent img{
+  width: 100px;
+}
 
-.popupMS label {
+/* General Pop-up CSS*/
+
+.popupMS label input {
   /* font-family: Arial; */
   padding-left: 20px;
 }
 
-.title {
+.title h2 {
   text-align: center;
   /* font-family: Arial; */
-  font-size: larger;
+  font-size: x-large;
   padding: 20px;
 }
 
@@ -243,12 +224,12 @@ body {
 .popupMS {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 500px;
   background: #ffffff;
   border-radius: 6px;
   position: absolute;
   top: 25%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   padding: 30px 30px 30px;
   color: #333;
@@ -290,17 +271,70 @@ body {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+.dt_label #time{
+  margin-left: 200px;
+}
+
+.dt_input #date{
+  width: 200px;
+}
+
+.dt_input #time{
+  margin-left: 33px;
+  width: 200px;
+}
+
+.bppr_label #pr{
+  margin-left: 125px;
+}
+
+.bppr_input #bp{
+  width: 91px;
+}
+
+.bppr_input #pr{
+  margin-left: 33px;
+  width: 200px;
+}
+
+.rrtp_label #temp{
+  margin-left: 118px;
+}
+
+.rrtp_input #rr{
+  width: 200px;
+}
+
+.rrtp_input #temp{
+  margin-left: 35px;
+  width: 200px;
+}
+
+.msrm_label #remarks{
+  margin-left: 135px;
+}
+
+.msrm_input #ms{
+  width: 200px;
+}
+
+.msrm_input #rm{
+  margin-left: 35px;
+  width: 200px;
+}
+
+
 /* Pop-up for TPR sheet */
 
 .popupTPR {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  background: #fff;
+  width: 500px;
+  background: #ffffff;
   border-radius: 6px;
   position: absolute;
   top: 25%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   padding: 30px 30px 30px;
   color: #333;
@@ -329,9 +363,9 @@ body {
 }
 
 .popupTPR .close {
-  width: 10%;
+  width: 8%;
   margin-top: 0px;
-  padding: 6px 0;
+  padding: 8px 0;
   background: #4c74af;
   color: #fff;
   border: 0;
@@ -339,7 +373,6 @@ body {
   font-size: 18px;
   border-radius: 4px;
   cursor: pointer;
-  align-self: self-start;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -348,12 +381,12 @@ body {
 .popupIO {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  background: #fff;
+  width: 500px;
+  background: #ffffff;
   border-radius: 6px;
   position: absolute;
   top: 25%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   padding: 30px 30px 30px;
   color: #333;
@@ -382,9 +415,9 @@ body {
 }
 
 .popupIO .close {
-  width: 10%;
+  width: 8%;
   margin-top: 0px;
-  padding: 10px 0;
+  padding: 8px 0;
   background: #4c74af;
   color: #fff;
   border: 0;
@@ -395,17 +428,64 @@ body {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+.io_header{
+  font-weight: bold;
+}
+
+.io_header #intake{
+  padding-left: 75px;
+}
+
+.io_header #output{
+  padding-left: 190px;
+}
+
+.pu #prt{
+  width: 120px;
+}
+
+.pu #urine {
+  padding-left: 33px;
+}
+
+.pu #urn{
+  width: 130px;
+  margin-left: 25px;
+}
+
+.od #orl{
+  margin-left: 43px;
+  width: 121px;
+}
+
+.od #drainage{
+  margin-left: 33px;
+}
+
+.od #drain{
+  width: 130px;
+}
+
+.others #oth1{
+  margin-left: 25px;
+  width: 120px;
+}
+
+.others #others2{
+  margin-left: 33px;
+}
+
 /* Pop-up for NN sheet */
 
 .popupNN {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  background: #fff;
+  width: 500px;
+  background: #ffffff;
   border-radius: 6px;
   position: absolute;
   top: 25%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   padding: 30px 30px 30px;
   color: #333;
@@ -434,9 +514,9 @@ body {
 }
 
 .popupNN .close {
-  width: 10%;
+  width: 8%;
   margin-top: 0px;
-  padding: 10px 0;
+  padding: 8px 0;
   background: #4c74af;
   color: #fff;
   border: 0;
@@ -445,4 +525,8 @@ body {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nn_input{
+  width: 443px;
 }
