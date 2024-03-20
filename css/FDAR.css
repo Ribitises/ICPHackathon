@@ -1,13 +1,15 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,396;1,396&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
 
 * {
   padding: 0;
   margin: 0;
+  font-family: "Hind Vadodara", sans-serif;
+  font-style: normal;
 }
 
 body {
   background-color: #cfdaee;
-  /* font-family: "Roboto Mono", monospace; */
+  
 }
 
 .container {
@@ -144,7 +146,6 @@ body {
 
 .tabs {
   overflow: hidden;
-  /* : monospace; */
   text-align: center;
   margin-top: 5%;
 }
@@ -169,7 +170,7 @@ body {
 }
 
 .tabContent {
-  display: hidden;
+  display: none;
   padding: 6px 12px;
   text-align: center;
   margin-top: 5%;
@@ -208,6 +209,10 @@ body {
 
 /* General Pop-up CSS*/
 
+.form{
+  padding-top: 10px;
+}
+
 .popupMS label input {
   padding-left: 20px;
 }
@@ -215,8 +220,9 @@ body {
 .title h2 {
   text-align: center;
   font-size: x-large;
-  padding: 20px;
+  padding: 8px;
 }
+
 
 /* Pop-up for Monitoring Sheet */
 
@@ -257,17 +263,30 @@ body {
 }
 
 .popupMS .close {
-  width: 8%;
+  width: 7%;
   margin-top: 0px;
   padding: 8px 0;
   background: #4c74af;
   color: #fff;
   border: 0;
   outline: none;
-  font-size: 18px;
+  font-size: 13px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dt_input input, .bppr_input input, .rrtp_input input, .msrm_input input{
+  height: 25px;
+  border-width: thin;
+}
+
+.dt_input, .bppr_input, .rrtp_input, .msrm_input{
+  padding-top: 5px;
+}
+
+.bppr_label, .rrtp_label, .msrm_label, .signature{
+  padding-top: 10px;
 }
 
 .dt_label #time {
@@ -284,7 +303,7 @@ body {
 }
 
 .bppr_label #pr {
-  margin-left: 125px;
+  margin-left: 130px;
 }
 
 .bppr_input #bp {
@@ -292,12 +311,12 @@ body {
 }
 
 .bppr_input #pr {
-  margin-left: 33px;
+  margin-left: 35px;
   width: 200px;
 }
 
 .rrtp_label #temp {
-  margin-left: 118px;
+  margin-left: 120px;
 }
 
 .rrtp_input #rr {
@@ -310,7 +329,7 @@ body {
 }
 
 .msrm_label #remarks {
-  margin-left: 135px;
+  margin-left: 138px;
 }
 
 .msrm_input #ms {
@@ -338,6 +357,7 @@ body {
   color: #333;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
 .open-TPR {
@@ -361,14 +381,14 @@ body {
 }
 
 .popupTPR .close {
-  width: 8%;
+  width: 7%;
   margin-top: 0px;
   padding: 8px 0;
   background: #4c74af;
   color: #fff;
   border: 0;
   outline: none;
-  font-size: 18px;
+  font-size: 13px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -413,14 +433,14 @@ body {
 }
 
 .popupIO .close {
-  width: 8%;
+  width: 7%;
   margin-top: 0px;
   padding: 8px 0;
   background: #4c74af;
   color: #fff;
   border: 0;
   outline: none;
-  font-size: 18px;
+  font-size: 13px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -428,6 +448,11 @@ body {
 
 .io_header {
   font-weight: bold;
+  padding-top: 10px;
+}
+
+.pu, .od, .others, .total, .nurse{
+  padding: 10px;
 }
 
 .io_header #intake {
@@ -437,6 +462,8 @@ body {
 .io_header #output {
   padding-left: 190px;
 }
+
+#parenteral, #oral, #others1, .total
 
 .pu #prt {
   width: 120px;
@@ -512,14 +539,14 @@ body {
 }
 
 .popupNN .close {
-  width: 8%;
+  width: 7%;
   margin-top: 0px;
   padding: 8px 0;
   background: #4c74af;
   color: #fff;
   border: 0;
   outline: none;
-  font-size: 18px;
+  font-size: 13px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
