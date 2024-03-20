@@ -23,6 +23,13 @@ body {
   box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
+input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #4c74af;
+}
+
 .nwa_info,
 .asc_info,
 .number_info {
@@ -452,7 +459,7 @@ body {
 }
 
 .pu, .od, .others, .total, .nurse{
-  padding: 10px;
+  padding-top: 10px;
 }
 
 .io_header #intake {
@@ -463,7 +470,6 @@ body {
   padding-left: 190px;
 }
 
-#parenteral, #oral, #others1, .total
 
 .pu #prt {
   width: 120px;
@@ -474,13 +480,13 @@ body {
 }
 
 .pu #urn {
-  width: 130px;
-  margin-left: 25px;
+  width: 125px;
+  margin-left: 26px;
 }
 
 .od #orl {
   margin-left: 43px;
-  width: 121px;
+  width: 120px;
 }
 
 .od #drainage {
@@ -488,12 +494,17 @@ body {
 }
 
 .od #drain {
-  width: 130px;
+  width: 125px;
 }
 
 .others #oth1 {
   margin-left: 25px;
   width: 120px;
+}
+
+.others #oth2 {
+  margin-left: 16px;
+  width: 125px;
 }
 
 .others #others2 {
@@ -553,5 +564,13 @@ body {
 }
 
 .nn_input {
-  width: 443px;
+  width: 500px;
+}
+
+.focus_label, .data_label, .action_label, .response_label, .nurse{
+  margin-top: 10px;
+}
+
+.focus_input, .data_input, .action_input, .response_input, .nurse{
+  margin-top: 5px;
 }
