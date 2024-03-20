@@ -79,3 +79,67 @@ function submitNN(){
 function closeNN(){
     popupNN.classList.remove("open-NN");
 }
+
+// Temp Line Graph
+let labels_temp = ["March 16(12:20PM)", "March 16(4:20PM)", "March 16(8:20PM)", "March 16(12:20AM)"];
+let itemData_temp = [36, 35, 37.4, 37];
+
+const data_temp = {
+    labels: labels_temp,
+    datasets: [{
+        data: itemData_temp
+    }]
+};
+
+const config_temp = {
+    type: "line",
+    data: data_temp,
+    options: {
+        plugins: {
+            legend:{
+                display: false
+            },
+            title: {
+                display: true,
+                text: "Temperature (Celcius)"
+            }
+        }
+    }
+};
+
+const chart_temp = new Chart (
+    document.getElementById('temp_graph'),
+    config_temp
+)
+
+// PR Line Graph
+let labels_pr = ["March 16(12:20PM)", "March 16(4:20PM)", "March 16(8:20PM)", "March 16(12:20AM)"];
+let itemData_pr = [78, 80, 81, 80];
+
+const data_pr = {
+    labels: labels_pr,
+    datasets: [{
+        data: itemData_pr
+    }]
+};
+
+const config_pr = {
+    type: "line",
+    data: data_pr,
+    options: {
+        plugins: {
+            legend:{
+                display: false
+            },
+            title: {
+                display: true,
+                text: "Pulse Rate (bpm)"
+            }
+        }
+    }
+};
+
+const chart_pr = new Chart (
+    document.getElementById('pr_graph'),
+    config_pr
+)

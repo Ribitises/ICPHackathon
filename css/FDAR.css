@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); 
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,396;1,396&display=swap'); */
 
 * {
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   background-color: #cfdaee;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto Mono", monospace; */
 }
 
 .container {
@@ -34,7 +34,7 @@ body {
 
 /* Information Head */
 
-.icon img{
+.icon img {
   width: 75px;
   background-color: #fff;
   padding: 13px;
@@ -51,7 +51,7 @@ body {
   color: #fff;
 }
 
-.nw{
+.nw {
   margin-top: 55px;
   margin-left: 10px;
   padding-bottom: 50px;
@@ -87,52 +87,50 @@ body {
   padding-bottom: 10px;
 }
 
-#age{
+#age {
   padding: 0;
 }
 
-.info{
+.info {
   font-size: x-large;
   font-weight: bold;
 }
 
-.ascs_label label{
+.ascs_label label {
   padding-left: 40px;
 }
 
-.ascs_info{
+.ascs_info {
   padding-top: 3px;
 }
 
-.ascs_info #sex{
+.ascs_info #sex {
   padding-left: 43px;
 }
 
-.ascs_info #cs{
+.ascs_info #cs {
   padding-left: 45px;
 }
 
-.rbnum label{
+.rbnum label {
   padding-left: 70px;
 }
 
-.rbnum #bn_label{
+.rbnum #bn_label {
   padding-left: 125px;
 }
 
-#rn{
+#rn {
   padding-left: 0;
 }
 
-#rn_info{
+#rn_info {
   padding-left: 0px;
 }
-
 
 /* View & Edit Tabs */
 .tabForms {
   width: 100%;
-
 }
 
 .header {
@@ -146,7 +144,7 @@ body {
 
 .tabs {
   overflow: hidden;
-  /* font-family: monospace; */
+  /* : monospace; */
   text-align: center;
   margin-top: 5%;
 }
@@ -173,7 +171,6 @@ body {
 .tabContent {
   display: hidden;
   padding: 6px 12px;
-  /* font-family: Arial; */
   text-align: center;
   margin-top: 5%;
   animation: fadeEffect 1s;
@@ -182,8 +179,12 @@ body {
 }
 
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .tabContent li {
@@ -201,20 +202,18 @@ body {
   transition: 0.3s;
 }
 
-.tabContent img{
+.tabContent img {
   width: 100px;
 }
 
 /* General Pop-up CSS*/
 
 .popupMS label input {
-  /* font-family: Arial; */
   padding-left: 20px;
 }
 
 .title h2 {
   text-align: center;
-  /* font-family: Arial; */
   font-size: x-large;
   padding: 20px;
 }
@@ -271,58 +270,57 @@ body {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.dt_label #time{
+.dt_label #time {
   margin-left: 200px;
 }
 
-.dt_input #date{
+.dt_input #date {
   width: 200px;
 }
 
-.dt_input #time{
+.dt_input #time {
   margin-left: 33px;
   width: 200px;
 }
 
-.bppr_label #pr{
+.bppr_label #pr {
   margin-left: 125px;
 }
 
-.bppr_input #bp{
+.bppr_input #bp {
   width: 91px;
 }
 
-.bppr_input #pr{
+.bppr_input #pr {
   margin-left: 33px;
   width: 200px;
 }
 
-.rrtp_label #temp{
+.rrtp_label #temp {
   margin-left: 118px;
 }
 
-.rrtp_input #rr{
+.rrtp_input #rr {
   width: 200px;
 }
 
-.rrtp_input #temp{
+.rrtp_input #temp {
   margin-left: 35px;
   width: 200px;
 }
 
-.msrm_label #remarks{
+.msrm_label #remarks {
   margin-left: 135px;
 }
 
-.msrm_input #ms{
+.msrm_input #ms {
   width: 200px;
 }
 
-.msrm_input #rm{
+.msrm_input #rm {
   margin-left: 35px;
   width: 200px;
 }
-
 
 /* Pop-up for TPR sheet */
 
@@ -428,19 +426,19 @@ body {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.io_header{
+.io_header {
   font-weight: bold;
 }
 
-.io_header #intake{
+.io_header #intake {
   padding-left: 75px;
 }
 
-.io_header #output{
+.io_header #output {
   padding-left: 190px;
 }
 
-.pu #prt{
+.pu #prt {
   width: 120px;
 }
 
@@ -448,30 +446,30 @@ body {
   padding-left: 33px;
 }
 
-.pu #urn{
+.pu #urn {
   width: 130px;
   margin-left: 25px;
 }
 
-.od #orl{
+.od #orl {
   margin-left: 43px;
   width: 121px;
 }
 
-.od #drainage{
+.od #drainage {
   margin-left: 33px;
 }
 
-.od #drain{
+.od #drain {
   width: 130px;
 }
 
-.others #oth1{
+.others #oth1 {
   margin-left: 25px;
   width: 120px;
 }
 
-.others #others2{
+.others #others2 {
   margin-left: 33px;
 }
 
@@ -527,6 +525,6 @@ body {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.nn_input{
+.nn_input {
   width: 443px;
 }

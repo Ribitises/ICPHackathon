@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patient Menu</title>
@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="container">
+
       <!-- Patient Info -->
 
       <div class="patient">
@@ -181,8 +182,25 @@
       <!-- TPR Sheet -->
 
       <div class="popupTPR" id="popupTPR">
-        <button type="button" onclick="closeTPR()" class="close">X</button>
-        <h2>TPR Sheet</h2>
+        <div class="title">
+          <button type="button" onclick="closeTPR()" class="close">X</button>
+          <h2>TPR Sheet</h2>
+        </div>
+        <div class="line_graph">
+          <div class="temperature">
+            <h4>Temperature</h4>
+            <canvas id="temp_graph"></canvas>
+          </div>
+          <div class="pulse_rate">
+            <h4>Pulse Rate</h4>
+            <canvas id="pr_graph"></canvas>
+          </div>
+          <div class="respiration_rate">
+            <h4>Respiration Rate</h4>
+            <canvas id="rr_graph"></canvas>
+          </div>
+        </div>
+        
         <button type="submit" onclick="submitTPR()" class="submit">
           Submit
         </button>
@@ -288,6 +306,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/Input_Menu.js"></script>
   </body>
 </html>
