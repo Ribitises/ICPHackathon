@@ -8,21 +8,38 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>SwiftChart</h1>
+      <header id="navbar">
+        <h1><i>SwiftChart</i></h1>
+        <div class="navOptions">        <div class="nav">About Us</div>
+        <div class="nav">Contact Us</div>
+        <div class="nav">FAQ</div></div>
       </header>
-
+      <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>
+      <div class="pic_ad">
+        <img src="images/nursingBg.png" alt="" />
+      </div>
       <div class="advertisement">
-        <div class="pic_ad">
-          <img src="images/tn.png" alt="" />
-        </div>
         <div class="text_ad">
           <div class="tagline">
-            <label id="upper">Saving Lives Made</label> 
-            <br>
-            <label id="lower">Faster and Efficient</label>
+            <label class="upper"><i>Saving Lives Made</i></label> 
+            <br> 
+            <label class="lower"><i>Faster and Efficient</i></label>
           </div>
-          <div class="description">Lorem ipsum...</div>
+          <div class="description">A digitized nurse charting system powered by blockchain technology for faster and safer charting.</div>
+          <button class="aboutSwiftchart">About SwiftChart</button>
         </div>
       </div>
 

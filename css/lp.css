@@ -16,32 +16,128 @@ body{
 }
 
 header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
-  text-align: center;
-  padding: 20px;
+  text-align: start;
+  color: #ffffff;
+  padding: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
 }
+
+header:before{
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(10px);
+  margin: -20px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.navOptions {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  padding: 10px;
+}
+
 
 .advertisement{
   display: flex;
   flex-direction: row;
   color: white;
-  padding: 20px;
   height: 575px;
 }
 
 .text_ad{
-  margin-left: 100px;
+  margin-left: 800px;
+  margin-right: 250px;
+  margin-top: 220px;
+  width: 30rem;
+  height: 20rem;
 }
 
-.pic_ad{
-  padding-top: 125px;
-  padding-left: 100px;
+
+.pic_ad img{
+  display: flex; 
+  position: absolute;
+  height: 107vh;
+  width: 207vh; 
+  top: 0px;
+  z-index: -100;
 }
 
 .tagline{
-  padding-top: 125px;
+  width: 600px;
   font-weight: bold;
   font-size: xx-large;
+}
+
+.upper {
+  font-size: 60px;
+}
+
+.lower {
+  font-size: 60px;
+}
+
+.description {
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.aboutSwiftchart {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 35, 82);
+  margin-top: 20px;
+  width: 8rem;
+  height: 2rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border: 0px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+
+.aboutSwiftchart:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(10px);
+  margin: -20px;
 }
 
 .advertisement img{
@@ -49,6 +145,7 @@ header{
 }
 
 .services{
+  margin-top: 1000px;
   padding: 20px;
   color: #fff;
 }
