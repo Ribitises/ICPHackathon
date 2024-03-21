@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap");
 
 * {
   padding: 0;
@@ -9,7 +9,6 @@
 
 body {
   background-color: #cfdaee;
-  
 }
 
 .container {
@@ -23,12 +22,49 @@ body {
   box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
-input{
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-color: #4c74af;
+input {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  padding: 0 10px;
+  font-size: medium;
+  outline: none;
+  padding-top: 10px;
+  border: none;
+  border-bottom: 1px solid #4c74af;
 }
+
+/*
+
+.dt_input label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.dt_input label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #4c74af;
+  transform: translateX(-100%);
+}
+
+input:focus,
+input:valid {
+  color: #4c74af;
+  border: 4px solid #4c74af;
+  border: none;
+} */
 
 .nwa_info,
 .asc_info,
@@ -216,7 +252,7 @@ input{
 
 /* General Pop-up CSS*/
 
-.form{
+.form {
   padding-top: 10px;
 }
 
@@ -229,7 +265,6 @@ input{
   font-size: x-large;
   padding: 8px;
 }
-
 
 /* Pop-up for Monitoring Sheet */
 
@@ -283,16 +318,68 @@ input{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.dt_input input, .bppr_input input, .rrtp_input input, .msrm_input input{
-  height: 25px;
-  border-width: thin;
+.dt_input {
+  position: relative;
+  overflow: hidden;
 }
 
-.dt_input, .bppr_input, .rrtp_input, .msrm_input{
+.dt_input label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.dt_input label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content_label {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.dt_input input:focus + .label_name .content_label,
+.dt_input input:valid + .label_name .content_label {
+  transform: translateY(-100%);
+  font-size: 14px;
+  color: #4c74af;
+}
+
+.dt_input input:focus + .label_name::after,
+.dt_input input:valid + .label_name::after {
+  transform: translateX(0%);
+}
+
+.dt_input input,
+.bppr_input input,
+.rrtp_input input,
+.msrm_input input {
+  height: 25px;
+}
+
+.dt_input,
+.bppr_input,
+.rrtp_input,
+.msrm_input {
   padding-top: 5px;
 }
 
-.bppr_label, .rrtp_label, .msrm_label, .signature{
+.bppr_label,
+.rrtp_label,
+.msrm_label,
+.signature {
   padding-top: 10px;
 }
 
@@ -458,7 +545,11 @@ input{
   padding-top: 10px;
 }
 
-.pu, .od, .others, .total, .nurse{
+.pu,
+.od,
+.others,
+.total,
+.nurse {
   padding-top: 10px;
 }
 
@@ -469,7 +560,6 @@ input{
 .io_header #output {
   padding-left: 190px;
 }
-
 
 .pu #prt {
   width: 120px;
@@ -567,10 +657,18 @@ input{
   width: 500px;
 }
 
-.focus_label, .data_label, .action_label, .response_label, .nurse{
+.focus_label,
+.data_label,
+.action_label,
+.response_label,
+.nurse {
   margin-top: 10px;
 }
 
-.focus_input, .data_input, .action_input, .response_input, .nurse{
+.focus_input,
+.data_input,
+.action_input,
+.response_input,
+.nurse {
   margin-top: 5px;
 }

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c2841;
+}
+
+.container {
+  width: 10px;
+}
+
+.entryarea {
+  position: relative;
+  width: ;
+}
+
+input {
+  position: absolute;
+  width: 100%;
+  outline: none;
+  font-size: 2.2em;
+  padding: 0 30px;
+  line-height: 80px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: transparent;
+  transition: 0.1s ease;
+  z-index: 1111;
+}
+
+.dateline {
+  position: absolute;
+  font-size: 1.6em;
+  color: #fff;
+  padding: 0 20px;
+  margin: 0 20px;
+  transition: 0.2 ease;
+  background-color: #1c2841;
+}
+
+input:focus,
+input:valid {
+  color: #66ff00;
+  border: 4px solid #66ff00;
+}
+
+input:focus + .dateline,
+input:valid + .dateline {
+  color: #66ff00;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  transform: translate(-15px, -16px) scale(0.88);
+}

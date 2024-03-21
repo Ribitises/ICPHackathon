@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patient Menu</title>
@@ -8,12 +8,11 @@
   </head>
   <body>
     <div class="container">
-
       <!-- Patient Info -->
 
       <div class="patient">
         <div class="info_head">
-          <div class="icon"><img src="images/icu.webp" alt=""></div>
+          <div class="icon"><img src="images/icu.webp" alt="" /></div>
           <div class="nw">
             <label id="name"><b>Jose H. Balagtas</b></label>
             <br />
@@ -23,7 +22,7 @@
         <div class="info_body">
           <div class="ap">
             <label id="ap_label" class="label">Attending Physician</label>
-            <br>
+            <br />
             <label class="info">Dr. Mario L. Dela Cruz</label>
           </div>
         </div>
@@ -42,13 +41,13 @@
         <div class="rbnum">
           <label id="rn" class="label">Room No.</label>
           <label id="bn">Bed No.</label>
-          <br>
+          <br />
           <label class="info" id="rn_info">2</label>
           <label class="info" id="bn_label">5</label>
         </div>
         <div class="hnum">
           <label id="hn" class="label">Hospital Number</label>
-          <br>
+          <br />
           <label class="info">0122-45212</label>
         </div>
       </div>
@@ -135,39 +134,41 @@
           <h2>Monitoring Sheet</h2>
         </div>
         <div class="form">
-          <div class="dt_label">
-            <label id="date">Date: </label>
-            <label id="time">Time: </label>
-          </div>
           <div class="dt_input">
-            <input type="date" name="" id="date" />
-            <input type="time" name="" id="time" />
+            <input type="date" id="date" required />
+            <label class="label_name">
+              <span class="content_label">Date</span>
+            </label>
+            <input type="time" id="time" required />
+            <label class="label_name">
+              <span class="content_label">Time</span>
+            </label>
           </div>
           <div class="bppr_label">
             <label id="bp">Blood Pressure: </label>
             <label id="pr">Pulse Rate: </label>
           </div>
           <div class="bppr_input">
-            <input type="number" name="" id="bp" />
+            <input type="number" id="bp" required />
             <label>/</label>
-            <input type="number" name="" id="bp" />
-            <input type="number" name="" id="pr" />
+            <input type="number" id="bp" required />
+            <input type="number" id="pr" required />
           </div>
           <div class="rrtp_label">
             <label id="rr">Respiratory Rate: </label>
             <label id="temp">Temperature: </label>
           </div>
           <div class="rrtp_input">
-            <input type="number" name="" id="rr" />
-            <input type="number" name="" id="temp" />
+            <input type="number" id="rr" required />
+            <input type="number" id="temp" required />
           </div>
           <div class="msrm_label">
             <label id="ms">Mental Status: </label>
             <label id="remarks">Remarks: </label>
           </div>
           <div class="msrm_input">
-            <input type="text" name="" id="ms" />
-            <input type="text" name="" id="rm" />
+            <input type="text" id="ms" required />
+            <input type="text" id="rm" required />
           </div>
           <div class="signature">
             <label>Nurse's Name & Signature: </label>
@@ -199,7 +200,7 @@
             <canvas id="rr_graph"></canvas>
           </div>
         </div>
-        
+
         <button type="submit" onclick="submitTPR()" class="submit">
           Submit
         </button>
@@ -218,8 +219,8 @@
             <label id="time">Time: </label>
           </div>
           <div class="dt_input">
-            <input type="date" name="" id="date" />
-            <input type="time" name="" id="time" />
+            <input type="date" id="date" required />
+            <input type="time" id="time" required />
           </div>
           <div class="io_header">
             <label id="intake">Intake</label>
@@ -227,21 +228,21 @@
           </div>
           <div class="pu">
             <label id="parenteral">Parenteral: </label>
-            <input type="number" name="" id="prt" />
+            <input type="number" id="prt" required />
             <label id="urine">Urine: </label>
-            <input type="number" name="" id="urn" />
+            <input type="number" id="urn" required />
           </div>
           <div class="od">
             <label id="oral">Oral: </label>
-            <input type="number" name="" id="orl" />
+            <input type="number" id="orl" required />
             <label id="drainage">Drainage: </label>
-            <input type="number" name="" id="drain" />
+            <input type="number" id="drain" required />
           </div>
           <div class="others">
             <label id="others1">Others: </label>
-            <input type="number" name="" id="oth1" />
+            <input type="number" id="oth1" required />
             <label id="others2">Others: </label>
-            <input type="number" name="" id="oth2" />
+            <input type="number" id="oth2" required />
           </div>
           <div class="total">
             <label for="">Total: </label>
@@ -268,32 +269,32 @@
             <label id="time">Time: </label>
           </div>
           <div class="dt_input">
-            <input type="date" name="" id="date" />
-            <input type="time" name="" id="time" />
+            <input type="date" id="date" required />
+            <input type="time" id="time" required />
           </div>
           <div class="focus_label">
             <label for="">Focus: </label>
           </div>
           <div class="focus_input">
-            <input type="text" name="" class="nn_input" />
+            <input type="text" class="nn_input" required />
           </div>
           <div class="data_label">
             <label for="">Data: </label>
           </div>
           <div class="data_input">
-            <input type="text" name="" class="nn_input" />
+            <input type="text" class="nn_input" required />
           </div>
           <div class="action_label">
             <label for="">Action: </label>
           </div>
           <div class="action_input">
-            <input type="text" name="" class="nn_input" />
+            <input type="text" class="nn_input" required />
           </div>
           <div class="response_label">
             <label for="">Response: </label>
           </div>
           <div class="response_input">
-            <input type="text" name="" class="nn_input" />
+            <input type="text" class="nn_input" required />
           </div>
           <div class="nurse">
             <label>Nurse's Name & Signature</label>
