@@ -9,7 +9,7 @@ function openTab(evt, tabName){
         tabcontent[i].style.display = "none";
     }
 
-    tab = document.getElementsByClassName("tab");
+    tab = document.getElementsByClassName("dashburd");
     for (i = 0; i < tab.length; i++){
         tab[i].className = tab[i].className.replace(" active", "");;
     }

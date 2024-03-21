@@ -57,7 +57,7 @@
 
 .head2 {
   display: flex;
-  margin-top: 47px;
+  margin-top: 15px;
   flex-direction: column;
   font-family: Arial;
   color: #4c74af;
@@ -75,17 +75,24 @@
 
 .dashburd {
   padding-top: 10px;
+  padding-left: 15px;
 }
 
 .signin1 {
   font-size: 15px;
-  padding-top: 0px;
 }
 
-.signin2 {
+#rec_his{
+  padding-top: 10px;
+}
+
+.signin2{
   font-size: 15px;
-  margin-top: 50px;
-  padding-top: 5px;
+  padding-top: 10px;
+}
+
+#profile {
+  padding-top: 25px;
 }
 
 .head > .provcreds {
@@ -101,7 +108,7 @@
 
 .divider2 {
   position: absolute;
-  margin-top: 250px;
+  margin-top: 375px;
   height: 0.7px;
   width: 295px;
   background-color: #4c74af; /* Add white background color */
@@ -109,18 +116,22 @@
 
 .divider3 {
   position: absolute;
-  margin-top: 515px;
+  margin-top: 505px;
   height: 0.7px;
   width: 295px;
   background-color: #4c74af; /* Add white background color */
 }
 
-
 .logout {
-  margin-top: 170px;
+  margin-top: 10px;
 }
 
-.table-container {
+.logout a{
+  color: #4c74af;
+  text-decoration: none;
+}
+
+.tabContent {
   flex: 1;
   border-radius: 5px;
   overflow: hidden;
@@ -206,7 +217,35 @@ td:last-child {
   cursor: pointer;
 }
 
-
 body {
   background-color: #cfdaee;
 }
+
+.tabs_form{
+  width: 65%;
+  padding-left: 75px;
+  padding-top: 30px;
+}
+
+.dash button {
+  background-color: inherit;
+  padding-top: 10px;
+  font-family: Arial;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #4c74af;
+  transition: 0.3s;
+  align-items: space-evenly;
+  row-gap: 10px;
+}
+
+.dash button:hover {
+  text-decoration: underline;
+}
+
+.tabContent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
