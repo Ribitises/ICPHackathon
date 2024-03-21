@@ -8,17 +8,20 @@
 }
 
 .rectangle1 {
-  height: 100vh;
+  display: flex;
+  height: 65px;
   width: 300px;
   background-color: #4c74af;
   padding: 10px;
   box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
   position: relative;
 }
+
 .rectangle2 {
-  height: 90vh;
+  display: flex;
+  height: 600px;
   width: 300px;
-  margin-top: 140px;
+  margin-top: 84px;
   background-color: #ffffff;
   padding: 10px;
   box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
@@ -37,23 +40,24 @@
 }
 
 .profpic {
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   position: absolute;
   background-color: white;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 3px;
 }
 
 .head {
-  margin-top: 45px;
-  margin-left: 110px;
+  margin-top: 3px;
+  margin-left: 70px;
   font-family: Arial;
   color: white;
 }
 
 .head2 {
   display: flex;
+  margin-top: 47px;
   flex-direction: column;
   font-family: Arial;
   color: #4c74af;
@@ -63,13 +67,25 @@
 
 .dash {
   display: flex;
+  margin-left: 5px;
   flex-direction: column;
   align-items: space-evenly;
   row-gap: 10px;
 }
 
-.head > .signin {
+.dashburd {
+  padding-top: 10px;
+}
+
+.signin1 {
   font-size: 15px;
+  padding-top: 0px;
+}
+
+.signin2 {
+  font-size: 15px;
+  margin-top: 50px;
+  padding-top: 5px;
 }
 
 .head > .provcreds {
@@ -84,17 +100,43 @@
 }
 
 .divider2 {
-  height: 1px;
-  width: auto;
+  position: absolute;
+  margin-top: 250px;
+  height: 0.7px;
+  width: 295px;
   background-color: #4c74af; /* Add white background color */
+}
+
+.divider3 {
+  position: absolute;
+  margin-top: 515px;
+  height: 0.7px;
+  width: 295px;
+  background-color: #4c74af; /* Add white background color */
+}
+
+
+.logout {
+  margin-top: 170px;
 }
 
 .table-container {
   flex: 1;
-  padding: 10px;
   border-radius: 5px;
   overflow: hidden;
-  margin-left: 10px; /* Adjusted margin to create space between sidebar and table */
+}
+
+.tableHeader {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin-left: 320px;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 65px;
+  width: 77.4%;
+  padding: 10px;
+  background-color: white;
 }
 
 .patientList {
@@ -102,8 +144,10 @@
 }
 
 table {
-  margin-top: 80px;;
-  width: 60%; /* Set table width to 100% to fill the container */
+  margin-top: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 98.2%;
   border-collapse: collapse;
   border: 1px solid black;
 }
@@ -125,6 +169,43 @@ th {
 td:last-child {
   border-right: none;
 }
+
+.searchTerm {
+  width: 100%;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 350px;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 505px;
+  transform: translate(-50%, -50%);
+  z-index: +10;
+}
+
+.button {
+  height: 35px;
+  margin-top: 100px;
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  right: 13px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 
 body {
   background-color: #cfdaee;
