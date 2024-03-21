@@ -19,8 +19,7 @@
 
 .rectangle2 {
   display: flex;
-  height: 100%;
-  max-height: 600px;
+  height: 600px;
   width: 300px;
   margin-top: 84px;
   background-color: #ffffff;
@@ -78,9 +77,15 @@
   padding-top: 10px;
 }
 
-.head2 > .signin {
+.signin1 {
   font-size: 15px;
-  padding-top: 20px;
+  padding-top: 0px;
+}
+
+.signin2 {
+  font-size: 15px;
+  margin-top: 50px;
+  padding-top: 5px;
 }
 
 .head > .provcreds {
@@ -96,11 +101,20 @@
 
 .divider2 {
   position: absolute;
+  margin-top: 250px;
+  height: 0.7px;
+  width: 295px;
+  background-color: #4c74af; /* Add white background color */
+}
+
+.divider3 {
+  position: absolute;
   margin-top: 515px;
   height: 0.7px;
   width: 295px;
   background-color: #4c74af; /* Add white background color */
 }
+
 
 .logout {
   margin-top: 170px;
