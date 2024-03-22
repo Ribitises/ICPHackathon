@@ -86,8 +86,7 @@ header:before{
 .pic_ad img{
   display: flex; 
   position: absolute;
-  height: 107vh;
-  width: 207vh; 
+  width: 100%; 
   top: 0px;
   z-index: -100;
 }
@@ -147,8 +146,7 @@ header:before{
 .pic_ad2 img{
   display: flex; 
   position: absolute;
-  height: 107vh;
-  width: 207vh; 
+  width: 100%;
   top: 750px;
   z-index: 0;
 }
@@ -226,10 +224,27 @@ header:before{
   font-size: 24px;
 }
 
+.pic_ad3 img{
+  display: flex; 
+  position: absolute;
+  width: 100%;
+  top: 1570px;
+  z-index: 0;
+}
+
 .services{
-  margin-top: 1000px;
-  padding: 20px;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 700px;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  height: 500px;
+  width: 700px;
+  padding-top: 70px;
+  color: #000000;
 }
 
 .header_services{
@@ -246,19 +261,35 @@ header:before{
 }
 
 .list_services{
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  /* background-color: white; */
+  border-radius: 5px;
   padding: 20px;
-  margin-left: 30%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
-.list_services li{
-  list-style: none;
-  border: 1px solid #fff;
-  border-radius: 30px;
+.list_services{
+  display: flex;
+  flex-direction: row;
   padding: 20px;
   margin-top: 30px;
-  color: white;
-  width: 500px;
+  color: #000000;
+  width: 1000px;
 }
+
+.service {
+  border-radius: 5px;
+  background-color: #ffffff;
+  height: 15rem;
+  width: 400px;
+  margin: 20px;
+  padding-left: 10px;
+}
+
 
 .sneak_peek{
   background-color: #fff;
