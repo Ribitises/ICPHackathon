@@ -181,6 +181,10 @@ td:last-child {
   border-right: none;
 }
 
+.search{
+  padding-left: 30px;
+}
+
 .searchTerm {
   width: 100%;
   border: 1px solid #ffffff;
@@ -247,5 +251,14 @@ body {
 .tabContent {
   display: none;
   animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
