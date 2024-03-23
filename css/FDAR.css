@@ -3,7 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Hind Vadodara", sans-serif;
+  font-family: Arial;
   font-style: normal;
 }
 
@@ -80,30 +80,38 @@ input:valid {
 /* Information Head */
 
 .icon img {
-  width: 75px;
+  width: 35px;
   background-color: #fff;
   padding: 13px;
   border-radius: 5px;
-  margin-top: 18px;
-  margin-left: 18px;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 .info_head {
   display: flex;
   flex-direction: row;
   background-color: #4c74af;
-  height: 135px;
+  height: 85px;
   color: #fff;
 }
 
+.info_body,
+.ascs,
+.rbnum,
+.hnum {
+  color: #4c74af;
+}
+
 .nw {
-  margin-top: 55px;
+  margin-top: 30px;
   margin-left: 10px;
   padding-bottom: 50px;
 }
 
 .nw #name {
   font-size: 15px;
+  font-weight: bold;
 }
 
 .nw #ward {
@@ -180,11 +188,14 @@ input:valid {
 
 .header {
   width: 100%;
-  text-align: center;
-  background-color: #4c74af;
-  font-size: x-large;
-  color: #fff;
+  background-color: white;
+  font-size: 25px;
   font-weight: bold;
+  color: black;
+  justify-content: space-evenly;
+  height: 65px;
+  padding: 5px;
+  padding-top: 15px;
 }
 
 .tabs {

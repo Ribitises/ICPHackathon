@@ -70,25 +70,25 @@
   margin-left: 5px;
   flex-direction: column;
   align-items: space-evenly;
-  row-gap: 10px;
+  row-gap: 15px;
 }
 
 .dashburd {
-  padding-top: 10px;
   padding-left: 15px;
+  font-size: 13px;
 }
 
 .signin1 {
   font-size: 15px;
 }
 
-#rec_his{
+#rec_his {
   padding-top: 10px;
 }
 
-.signin2{
+.signin2 {
   font-size: 15px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 #profile {
@@ -116,7 +116,7 @@
 
 .divider3 {
   position: absolute;
-  margin-top: 505px;
+  margin-top: 500px;
   height: 0.7px;
   width: 295px;
   background-color: #4c74af; /* Add white background color */
@@ -126,7 +126,7 @@
   margin-top: 10px;
 }
 
-.logout a{
+.logout a {
   color: #4c74af;
   text-decoration: none;
 }
@@ -135,6 +135,14 @@
   flex: 1;
   border-radius: 5px;
   overflow: hidden;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+}
+
+.tabContent thead tr th {
+  background-color: #4c74af;
+  color: #ffffff;
 }
 
 .tableHeader {
@@ -160,16 +168,15 @@ table {
   margin-right: 10px;
   width: 98.2%;
   border-collapse: collapse;
-  border: 1px solid black;
 }
 
-th, td {
-  padding: 5px;
+th,
+td {
   font-family: Arial;
   text-align: left;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border: none;
   background-color: #ffffff;
+  padding: 12px 15px;
 }
 
 th {
@@ -177,12 +184,27 @@ th {
   font-weight: bold;
 }
 
+tbody,
+tr {
+  border-bottom: 1px solid #a7b2c5;
+}
+
+tbody,
+tr:nth-of-type(even) {
+  background-color: #4c74af;
+}
+
+tbody,
+tr:last-of-type {
+  border-bottom: 2px solid #4469a0;
+}
+
 td:last-child {
   border-right: none;
 }
 
-.search{
-  padding-left: 30px;
+.search {
+  padding-left: -500px;
 }
 
 .searchTerm {
@@ -195,24 +217,24 @@ td:last-child {
 }
 
 /*Resize the wrap to see the search bar change!*/
-.wrap{
+.wrap {
   width: 350px;
   position: absolute;
   margin-top: 120px;
-  margin-left: 505px;
+  margin-left: 185px;
   transform: translate(-50%, -50%);
   z-index: +10;
 }
 
 .button {
-  height: 35px;
-  margin-top: 100px;
+  height: 30px;
+  margin-top: 105px;
   position: absolute;
   background-color: #ffffff;
   border: none;
   border-radius: 5px;
+  margin-left: 825px;
   padding: 5px;
-  right: 13px;
   color: rgb(0, 0, 0);
   text-align: center;
   text-decoration: none;
@@ -225,10 +247,10 @@ body {
   background-color: #cfdaee;
 }
 
-.tabs_form{
+.tabs_form {
   width: 65%;
   padding-left: 75px;
-  padding-top: 30px;
+  padding-top: 0px;
 }
 
 .dash button {
@@ -261,4 +283,3 @@ body {
     opacity: 1;
   }
 }
-
