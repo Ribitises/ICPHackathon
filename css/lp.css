@@ -300,3 +300,38 @@ input[type="radio"]{
 .accordion input[type="radio"]:checked + label::before{
   content: '-';
 }
+
+.pic_ad4 img{
+  position: absolute;
+  width: 100%;
+  top: 2405px;
+  z-index: -1;
+}
+
+.page4Text{
+  width: 1000px;
+  font-size: 45px;
+  color: #4c74af;
+  margin-top: 300px;
+  margin-left: 415px;
+  margin-right: 400px;
+}
+
+.page4QNA {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 60%;
+  position: absolute;
+  font-size: 20px;
+  text-align: justify;
+  color: #4c74af;
+  z-index: 10;
+  margin-top: 30px;
+  margin-left: 295px;
+  margin-right: 400px;
+}
+
+.page4Text2{
+  margin-top:20px;
+}
