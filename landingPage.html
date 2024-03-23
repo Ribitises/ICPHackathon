@@ -15,19 +15,48 @@
         <div class="nav">FAQ</div></div>
       </header>
       <script>
-        window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-        </script>
+// Sticky navbar
+window.onscroll = function() {
+  myFunction();
+};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+// Collapsible functionality
+var coll = document.getElementsByClassName("collapsible");
+
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function(event) {
+    event.stopPropagation(); // Stop the event from propagating to the document level
+
+    // Toggle active class and content height based on current state
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (this.classList.contains("active")) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+
+    // Close other open sections
+    for (var j = 0; j < coll.length; j++) {
+      if (coll[j] !== this && coll[j].classList.contains("active")) {
+        coll[j].classList.remove("active");
+        var otherContent = coll[j].nextElementSibling;
+        otherContent.style.maxHeight = null;
+      }
+    }
+  });
+}
+    </script>    
       <div class="pic_ad">
         <img src="images/nursingBg.png" alt="" />
       </div>
@@ -64,23 +93,32 @@
       <div class="pic_ad3">
         <img src="images/nursingBg3.png" alt="" />
       </div>
-
-      <div class="services">
-        <div class="header_services">
-          <label id="title_services">SwiftChart Features and Services</label>
-          <br />
-          <label id="description_services"
-            >Our team aims to create a program that will make nurse charting
-            quicker and easier.</label
-          >
-        </div>
-        <div class="list_services">
-            <div class="service">Nurse Charting</div>
-            <div class="service">Automatic TPR Sheet</div>
-            <div class="service">High Patient Data Security</div>
-      </div>
+      <div class="page3Text"><b><i>Features and Services</i></b></div>
+      <div class="page3Text2">Features and services users can expect when using <b><i>SwiftChart</i></b>.</div>
+      <ul class="accordion">
+        <li>
+          <input type="radio" name="accordion" id="first">
+          <label for="first">Products</label>
+          <div class="content">
+            <p>Dummy text</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="second">
+          <label for="second">Products</label>
+          <div class="content">
+            <p>Dummy text</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="third">
+          <label for="third">Products</label>
+          <div class="content">
+            <p>Dummy text</p>
+          </div>
+        </li>
+      </ul>
     </div>
-
     <script src="js/lp.js"></script>
   </body>
-</html>
+  </html>
