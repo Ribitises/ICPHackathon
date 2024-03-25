@@ -108,7 +108,7 @@
 
 .divider2 {
   position: absolute;
-  margin-top: 375px;
+  margin-top: 390px;
   height: 0.7px;
   width: 295px;
   background-color: #4c74af; /* Add white background color */
@@ -123,7 +123,7 @@
 }
 
 .logout {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .logout a {
@@ -155,7 +155,9 @@
   height: 65px;
   width: 77.4%;
   padding: 10px;
-  background-color: white;
+  background-color: #ffffff;
+  color: #4c74af;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
 .patientList {
@@ -214,6 +216,7 @@ td:last-child {
   height: 20px;
   border-radius: 5px;
   outline: none;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
 /*Resize the wrap to see the search bar change!*/
@@ -230,12 +233,12 @@ td:last-child {
   height: 30px;
   margin-top: 105px;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #4c74af;
   border: none;
   border-radius: 5px;
-  margin-left: 825px;
+  margin-left: 775px;
   padding: 5px;
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
   display: inline-block;

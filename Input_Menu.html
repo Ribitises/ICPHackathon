@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Menu</title>
+    <title>SwiftChart || Nurse Chart</title>
     <link rel="stylesheet" type="text/css" href="css/FDAR.css" />
   </head>
   <body>
@@ -13,7 +13,7 @@
       <div class="patient">
         <div class="info_head">
           <div class="icon"><img src="images/icu.webp" alt="" /></div>
-          <d      iv class="nw">
+          <div class="nw">
             <label id="name"><b>Jose H. Balagtas</b></label>
             <br />
             <label id="ward">ICU</label>
@@ -50,11 +50,27 @@
           <br />
           <label class="info">0122-45212</label>
         </div>
+        <div class="admission">
+          <label>Date of Admission</label>
+          <br>
+          <label class="info">March 21, 2024</label>
+        </div>
+        <div class="divider"></div>
+        <div class="options">
+          <div class="option">DASHBOARD</div>
+          <div class="option">PROFILE</div>
+          <div class="option">SETTINGS</div>
+          <div class="option" id="about_us">ABOUT US</div>
+        </div>
+        <div class="divider"></div>
+        <div class="log-out">
+          <label>Log-out</label>
+        </div>
       </div>
 
       <!-- View & Edit Tabs -->
       <div class="tabForms">
-        <div class="header">NURSE CHARTING</div>
+        <div class="header"><label id="header_label">NURSE CHART</label></div>
 
         <div class="tabs">
           <button class="tab" onclick="openTab(event, 'Add')">ADD</button>

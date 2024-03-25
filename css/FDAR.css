@@ -99,7 +99,10 @@ input:valid {
 .info_body,
 .ascs,
 .rbnum,
-.hnum {
+.hnum, 
+.admission,
+.options,
+.log-out{
   color: #4c74af;
 }
 
@@ -120,24 +123,17 @@ input:valid {
 
 /* Information Body */
 
-.ap {
+.ap, .ascs, .rbnum, .hnum, .admission, .options, .log-out{
   padding: 20px;
   padding-bottom: 10px;
 }
 
-.ascs {
-  padding: 20px;
+.option{
   padding-bottom: 10px;
 }
 
-.rbnum {
-  padding: 20px;
-  padding-bottom: 10px;
-}
-
-.hnum {
-  padding: 20px;
-  padding-bottom: 10px;
+#about_us{
+  padding-bottom: 5px;
 }
 
 #age {
@@ -181,6 +177,21 @@ input:valid {
   padding-left: 0px;
 }
 
+.option{
+  font-weight: bold;
+}
+
+
+.divider{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 10px;
+  height: 0.7px;
+  width: 290px;
+  background-color: #4c74af;
+
+}
+
 /* View & Edit Tabs */
 .tabForms {
   width: 100%;
@@ -191,11 +202,11 @@ input:valid {
   background-color: white;
   font-size: 25px;
   font-weight: bold;
-  color: black;
+  color: #4c74af;
   justify-content: space-evenly;
-  height: 65px;
-  padding: 5px;
-  padding-top: 15px;
+  height: 45px;
+  padding: 10px;
+  padding-top: 30px;
 }
 
 .tabs {
@@ -293,6 +304,7 @@ input:valid {
   color: #333;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
 .open-MS {
@@ -509,12 +521,13 @@ input:valid {
   border-radius: 6px;
   position: absolute;
   top: 25%;
-  left: 60%;
+  left: 63%;
   transform: translate(-50%, -50%);
   padding: 30px 30px 30px;
   color: #333;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
 .open-IO {
@@ -628,6 +641,7 @@ input:valid {
   color: #333;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
+  box-shadow: 0 0 8px 0 rgba(94, 94, 94, 0.2);
 }
 
 .open-NN {
