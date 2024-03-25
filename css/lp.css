@@ -63,7 +63,8 @@ header:before{
 }
 
 .nav {
-  padding: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
 }
 
 
@@ -332,6 +333,31 @@ input[type="radio"]{
   margin-right: 400px;
 }
 
+
 .page4Text2{
   margin-top:20px;
+}
+
+.contactSegment {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 610px;
+  padding: 100px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
 }
